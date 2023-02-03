@@ -1,0 +1,25 @@
+{
+  "name": "server-side-app-test",
+  "version": "1.0.0",
+  "description": "This is a test server-side app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psydwinder/Server-side-app-test.git"
+  },
+  "author": "Niete Ratilal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Psydwinder/Server-side-app-test/issues"
+  },
+  "homepage": "https://github.com/Psydwinder/Server-side-app-test#readme",
+  "dependencies": {
+    "eslint": "^8.33.0",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
+  }
+}
