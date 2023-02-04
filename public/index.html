@@ -7,6 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <script>
+        if ('geolocation' in navigator){
+            console.log('geolocation available');
+            navigator.geolocation.getCurrentPosition(function(position){
+                const lat = position.coords.latitude;
+                const long = position.coords.longitude;
+                document.getElementById('latitude').textContent= lat;
+                document.getElementById('longitude').textContent= long;
+                console.log(position)
+            })
+        } else {
+            console.log('geolocation not available');
+        }
+    </script>
+    <h1>Where are you?</h1>
+    <p>latitude: <span id="latitude"></span>&deg;</p>
+    <p>longitude <span id="longitude"></span>&deg;</p>
 </body>
 </html>
