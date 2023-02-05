@@ -1,19 +1,8 @@
 const express = require('express');
+const cookieParser = require('cookie-parser');
+//const bodyParser = express.urlencoded({ extended: false });
 
 const server = express();
+const cookies = cookieParser(process.env.COOKIE_SECRET); //process.env.COOKIE_SECRET
 
-server.use(express.static('public'));
-server.use(express.json({limit: '1mb'}));
-
-server.post('/',(request,response)=>{
-    console.log('I got a request!');
-    console.log(request.body);
-    const data = request.body;
-    response.json({
-        status: 'success',
-        latitude: data.lat,
-        longitude: data.long,
-    })
-})
-
-module.exports = server;
+server.use(cookies); //pass cookieParser to all reoutes with req object
